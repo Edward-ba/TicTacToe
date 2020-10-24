@@ -195,7 +195,15 @@ public class Board {
             else
                 i = 3;
         }
-        
-        return false;
+
+        for (int x = 0; x < 3; ++x) {
+            for (int y = 0; y < 3; ++y) {
+                if (grid[x][y] == ' ') {
+                    return false;
+                }
+            }
+        }
+        System.out.println("There is a tie");
+        return true;
     }
 }
